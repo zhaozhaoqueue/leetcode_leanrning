@@ -1,5 +1,11 @@
 package linked_list;
 
+
+// core idea: 
+//  dummy as start and points to the head
+//      pointer starts from dummy
+//      swap pair of node
+//      move the pointer to the end of the swapped pair
 public class SwapNodesInPairs {
     public class ListNode {
         int val;
@@ -10,24 +16,23 @@ public class SwapNodesInPairs {
     }
 
     public ListNode swapPairs(ListNode head) {
-        // corner case
-        if (head == null || head.next == null){
-            return head;
-        }
         ListNode dummy = new ListNode();
         dummy.next = head;
         ListNode pre = dummy;
-        ListNode right = head.next;
 
-        while (right != null){
+        while (pre.next != null && pre.next.next != null){
+            ListNode left = pre.next;
+            ListNode right = pre.next.next;
+
+            // swap
             ListNode temp = right.next;
-            head.next = temp;
             pre.next = right;
+            right.next = left;
+            left.next = temp;
+
             // move
             pre = pre.next.next;
-            right = temp.next;
-            head = temp; 
         }
-        return dummy;
+        return dummy.next;
     }
 }
