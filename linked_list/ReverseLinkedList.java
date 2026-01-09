@@ -1,4 +1,4 @@
-package linked_array;
+package linked_list;
 
 // core idea: initialize a null as the end of the reversed linked array
 //   2 pointer: pre node and current node, for further switch
