@@ -1,4 +1,4 @@
-package linked_array;
+package linked_list;
 
 // core idea: 2 pointer
 //      use dummy to keep track the beginning

@@ -1,4 +1,4 @@
-package linked_array;
+package linked_list;
 
 // core idea: keep a dummy at beginning to get the result
 

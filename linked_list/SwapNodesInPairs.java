@@ -1,4 +1,4 @@
-package linked_array;
+package linked_list;
 
 public class SwapNodesInPairs {
     public class ListNode {

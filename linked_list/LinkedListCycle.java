@@ -1,4 +1,4 @@
-package linked_array;
+package linked_list;
 
 // core idea: slow and fast pointer
 //      when the cycle exists, the fast pointer and the slow pointer will meet
